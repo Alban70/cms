@@ -1,0 +1,10 @@
+RewriteEngine on
+#do not url rewrite media resources, add format to not rewrite here
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#RewriteRule pour la partie guillaume
+#RewriteRule ^(.*)$ /cms/gm/index.php
+
+#RewriteRule pour la partie alban
+RewriteRule ^(.*)$ /cms/Web/app.php
